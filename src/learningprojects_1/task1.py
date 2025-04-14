@@ -32,7 +32,7 @@ class LinkedList:
             raise StopIteration
 
     def add(self, x):                                   
-        if x.data != None:
+        if x.data is not None:
             last_node = self.nodes[-1]
             last_node.next_id = id(last_node.data)
             new_node = Node(x.data, None)
