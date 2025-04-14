@@ -8,7 +8,6 @@ class Node:
         self.data = data
         self.next_id = next_id
 
-
 class LinkedList:
 
     def __init__(self, *args):
@@ -31,7 +30,7 @@ class LinkedList:
         else:
             raise StopIteration
 
-    def add(self, x):                                   
+    def add(self, x):                               
         if x.data is not None:
             last_node = self.nodes[-1]
             last_node.next_id = id(last_node.data)
