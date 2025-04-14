@@ -14,15 +14,15 @@ class LinkedList:
     def __init__(self, *args):
         self.len_args = len(args)
         self.nodes = args
- 
+
     def __iter__(self):
         self.n = 0
         return self
- 
+
     def __next__(self): 
         if self.n < self.len_args:
-            self.node = self.nodes[self.n] 
-            self.next_id  = id(self.node.data)
+            self.node = self.nodes[self.n]
+            self.next_id = id(self.node.data)
             self.node = Node(self.node.data, self.next_id)
             self.n += 1
             if self.n == self.len_args:
